@@ -13,7 +13,7 @@ pages:
   image: alpine:latest
   script:
   - mkdir -p ./public
-  - cp ./index.html ./assets/* ./public/
+  - cp ./index.html ./assets ./public/
   artifacts:
     paths:
     - public
