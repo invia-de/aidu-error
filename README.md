@@ -10,6 +10,7 @@ All other commits are published to [Gitlab Pages](https://shared-travel-packages
 ## Usage
 
 Once an emergency happens Cloudflare *should* display the page automatically for [ab-in-den-urlaub.de](ab-in-den-urlaub.de).
+
 All other whitelabels must be redirected via DNS by IT Operations, these whitelabels are as of now (2019/10/10):
 
 * ab-in-den-urlaub.ch
