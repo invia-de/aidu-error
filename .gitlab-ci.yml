@@ -1,13 +1,14 @@
 variables:
   S3_BUCKET_NAME: "ab-in-den-urlaub-fallback"
-  AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID 
+  AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
   AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
 
 deploy:
   image: python:latest
   script:
+  - echo $AWS_ACCESS_KEY_ID
   - pip install awscli
-  - aws s3 cp ./ s3://$S3_BUCKET_NAME/ --recursive --exclude "README.md" --exclude ".gitlab-ci.yml"
+  - aws s3 cp ./ s3://$S3_BUCKET_NAME/ --recursive --exclude "README.md" --exclude ".gitlab-ci.yml" --exclude ".git"
   only:
   - tags
 
