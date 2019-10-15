@@ -4,7 +4,7 @@ Emergency website shown via S3 if AIDU is completely offline.
 
 ## About
 
-This website is being deployed using Gitlab CI to [AWS S3](http://ab-in-den-urlaub-fallback.s3-website.eu-central-1.amazonaws.com/) ([Cloudfront](https://d1e2n8ff33k5hc.cloudfront.net/)) for each tag. (Not working as of yet, as it needs data credentials for AWS).
+This website is being deployed using Gitlab CI to [AWS S3](http://ab-in-den-urlaub-fallback.s3-website.eu-central-1.amazonaws.com/) ([Cloudfront](https://d1e2n8ff33k5hc.cloudfront.net/)) for each tag.
 
 All other commits are published to [Gitlab Pages](https://shared-travel-packages.gitlab-pages.invia.io/aidu-whitelabel/emergency/).
 
