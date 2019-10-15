@@ -6,11 +6,7 @@ variables:
 deploy:
   image: python:latest
   script:
-  - echo $AWS_ACCESS_KEY_ID
-  - mkdir ~/.aws/
-  - touch ~/.aws/credentials
   - pip install awscli
-  - printf "[eb-cli]\naws_access_key_id = %s\naws_secret_access_key = %s\n" "$AWS_ACCESS_KEY_ID" "$AWS_SECRET_ACCESS_KEY" >> ~/.aws/credentials
   - aws s3 cp ./ s3://$S3_BUCKET_NAME/ --recursive --exclude "*" --include "*.html" --include "assets/*"
   only:
   - tags
