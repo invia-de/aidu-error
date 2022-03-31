@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!-- saved from url=(0038)https://d1e2n8ff33k5hc.cloudfront.net/ -->
-<html lang="de"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
+<html lang="de">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>ab-in-den-urlaub.de</title>
@@ -21,12 +21,6 @@
       width: 10rem;
       margin: 1rem;
     }
-
-    /*
-    #opty-emerg-main {
-      font-size: 1.5rem;
-    }
-    */
 
     #opty-emerg-main section {
       background: #EBF2FE;
@@ -71,11 +65,13 @@
       padding: 1rem;
     }
   </style>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="ae5b6291-94a6-4df9-ac96-b76a282aa626" type="text/javascript" async></script> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KSB4Z9S8BM"></script>
 </head>
 <body>
   <div id="opty-emerg-body">
       <header id="opty-emerg-header">
-          <img src="./Invia_Logo.svg" alt="Invia">
+          <img src="./assets/Invia_Logo.svg" alt="Invia">
         </header>
         <main id="opty-emerg-main">
           <div id="opty-emerg-image">
@@ -103,10 +99,36 @@
           </p>
         </footer>
   </div>
-  <div style="display:none;">
+  <div id="error-message" style="display:none;">
     ::ALWAYS_ONLINE_NO_COPY_BOX::
     ::CLOUDFLARE_ERROR_500S_BOX::
     ::CLOUDFLARE_ERROR_1000S_BOX::
   </div>
+  <script type="text/javascript">
+    var errorMessage = document.querySelector('#error-message').innerHTML;
 
-</body></html>
+    window.addEventListener('CookiebotOnAccept', function (e) {
+      if (Cookiebot.consent.statistics) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());  
+        gtag('event', 'error_cloudflare', {
+          'event_action' : errorMessage,
+          'dynamic_label' : window.location.href,
+          'non_interaction': true ,
+          'send_to': 'G-KSB4Z9S8BM'
+        }); 
+        gtag('event', 'error_cloudflare', {
+          'event_category' : 'error_cloudflare',
+          'event_action' : errorMessage,
+          'event_label' : window.location.href,
+          'non_interaction': true,
+          'send_to': 'UA-54623414-4' 
+        });
+      }
+    }, false);
+  </script> 
+</body>
+</html>
